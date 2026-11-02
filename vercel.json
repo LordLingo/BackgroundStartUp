@@ -1,0 +1,14 @@
+{
+  "redirects": [
+    {
+      "source": "/pricing.html",
+      "destination": "/whats-included.html",
+      "statusCode": 301
+    },
+    {
+      "source": "/pricing",
+      "destination": "/whats-included.html",
+      "statusCode": 301
+    }
+  ]
+}
