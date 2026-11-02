@@ -83,7 +83,7 @@ body.apply-bar-on{padding-bottom:62px}
 .thanks-contact{margin:18px 0 0}
 .hero-book{width:100%;margin-top:8px;padding:11px 14px}
 .book-line{margin:12px 0 0;font-size:14px;line-height:1.45;color:#526277}
-.book-line a{color:#147ff2;font-weight:750}
+.book-line a,.inline-link{color:#147ff2;font-weight:750}
 .cta-card .book-line{grid-column:1/-1;margin:4px 0 0;color:#e7f6ff;font-size:15px}
 .cta-card .book-line a{color:#fff;font-weight:800;text-decoration:underline;text-underline-offset:3px}
 .footer-grid .footer-book{margin:12px 0 0;max-width:330px;font-size:13px;line-height:1.45;color:#526277}
