@@ -132,6 +132,57 @@ if(applyBar){
   }
 }
 
+const clientTabs=document.querySelector('[data-client-tabs]');
+if(clientTabs){
+  const tabs=[...clientTabs.querySelectorAll('[role="tab"]')];
+  const selectTab=(index,focus)=>{
+    tabs.forEach((tab,i)=>{
+      const selected=i===index;
+      tab.setAttribute('aria-selected',String(selected));
+      tab.tabIndex=selected?0:-1;
+      const panel=document.getElementById(tab.getAttribute('aria-controls'));
+      if(panel)panel.hidden=!selected;
+    });
+    if(focus)tabs[index].focus();
+  };
+  tabs.forEach((tab,index)=>{
+    tab.addEventListener('click',()=>selectTab(index,false));
+    tab.addEventListener('keydown',event=>{
+      let next=null;
+      if(event.key==='ArrowRight'||event.key==='ArrowDown')next=(index+1)%tabs.length;
+      else if(event.key==='ArrowLeft'||event.key==='ArrowUp')next=(index-1+tabs.length)%tabs.length;
+      else if(event.key==='Home')next=0;
+      else if(event.key==='End')next=tabs.length-1;
+      if(next===null)return;
+      event.preventDefault();
+      selectTab(next,true);
+    });
+  });
+}
+
+const fitQuiz=document.querySelector('[data-fit-quiz]');
+if(fitQuiz){
+  const result=fitQuiz.querySelector('[data-quiz-result]');
+  const resultText=fitQuiz.querySelector('[data-quiz-text]');
+  const actions=fitQuiz.querySelector('[data-quiz-actions]');
+  const groups=['fit_start','fit_timing','fit_calls'];
+  const fitCopy='Sounds like a fit. A short call settles whether this is your business.';
+  const otherCopy='Honest answer, we like that. A short call settles whether this is your business or not.';
+  const updateQuiz=()=>{
+    const values=groups.map(name=>fitQuiz.querySelector(`input[name="${name}"]:checked`)?.value||'');
+    if(values.some(value=>!value)){
+      result.classList.remove('is-ready');
+      resultText.textContent='';
+      if(actions)actions.hidden=true;
+      return;
+    }
+    resultText.textContent=values.every(value=>value==='yes')?fitCopy:otherCopy;
+    result.classList.add('is-ready');
+    if(actions)actions.hidden=false;
+  };
+  fitQuiz.addEventListener('change',updateQuiz);
+}
+
 document.querySelectorAll('footer .footer-grid').forEach(footerGrid=>{
   if(footerGrid.querySelector('a[href="privacy.html"]'))return;
   const columns=[...footerGrid.children].filter(el=>!el.classList.contains('footer-brand'));

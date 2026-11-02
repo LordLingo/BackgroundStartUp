@@ -115,6 +115,30 @@
           "@type": "Answer",
           "text": "No. Brango built and owns its screening software, and our own developers customize it for affiliates and their clients."
         }
+      },
+      {
+        "@type": "Question",
+        "name": "How fast can I really launch?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Your branded portal and vendors are set up in weeks 1–2. From weeks 3–12 you run demos with Brango's help."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Will my market actually work?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "There are no territories, so you can sell anywhere in the U.S. On the first call we help you pick a starting niche, such as staffing, healthcare, or facility services."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is this a fit, both ways?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Every application is read by a person. We walk through the numbers and the fit on a call. If it's not a fit, we'll tell you. No payment is taken when you apply."
+        }
       }
     ]
   }
@@ -167,7 +191,9 @@
                 <label><span>Name *</span><input type="text" name="name" autocomplete="name" required></label>
                 <label><span>Email *</span><input type="email" name="email" autocomplete="email" required></label>
                 <label><span>Phone <em class="optional-mark">optional</em></span><input type="tel" name="phone" autocomplete="tel" inputmode="tel"></label>
-                <label><span>Message <em class="optional-mark">optional</em></span><input type="text" name="message" placeholder="Optional note"></label>
+                <label><span>Best time to reach you <em class="optional-mark">optional</em></span><input type="text" name="best_time" autocomplete="off"></label>
+                <label class="form-wide"><span>How do you plan to fund it? <em class="optional-mark">optional</em></span><select name="funding"><option value="">Select (optional)</option><option>Cash</option><option>SBA financing</option><option>Still deciding</option></select></label>
+                <label class="form-wide"><span>Message <em class="optional-mark">optional</em></span><input type="text" name="message" placeholder="Optional note"></label>
               </div>
               <button class="button button-primary button-large form-submit" type="submit">Apply to Become an Affiliate <b>→</b></button>
               <p class="next-steps">What happens next: Brango sends a short email reply to set up a call. The license fee is on the <a class="inline-link" href="/pricing.html">pricing page</a>.</p>
@@ -210,10 +236,16 @@
     </section>
 
     <section class="proof-band" aria-label="About Brango">
-      <div class="shell proof-row">
-        <div><strong>25+</strong><small>Years of experience</small></div>
-        <div><strong>50</strong><small>Affiliates</small></div>
-        <div><strong>One portal</strong><small>Calls, emails, and the full check</small></div>
+      <div class="shell">
+        <div class="proof-row">
+          <div><strong>25+</strong><small>Years of experience</small></div>
+          <div><strong>50</strong><small>Affiliates</small></div>
+          <div><strong>One portal</strong><small>Calls, emails, and the full check</small></div>
+        </div>
+        <ul class="trust-strip">
+          <li>No territories, protected zones, or zip-code limits. The entire United States is your market.</li>
+          <li>Built for FCRA-compliant screening: disclosure and authorization, adverse action, and disputes.</li>
+        </ul>
       </div>
     </section>
 
@@ -232,6 +264,22 @@
           <article class="industry-card reveal"><span>02</span><i>★</i><h3>B2B Entrepreneurs</h3><p>Build a service company around employer demand for background checks, with the portal and the back office already in place.</p><b>BUSINESS OWNERS</b></article>
           <article class="industry-card reveal"><span>03</span><i>☎</i><h3>Recruiting &amp; Staffing Pros</h3><p>People who already understand hiring workflows and staffing clients can talk to a market they already know.</p><b>HIRING NETWORK</b></article>
           <article class="industry-card reveal"><span>04</span><i>↗</i><h3>HR Professionals in Transition</h3><p>If you have spent your career in HR and are ready for a new chapter, your hiring knowledge, employer relationships and understanding of screening can become the foundation for a business you own.</p><b>TURN EXPERIENCE INTO OWNERSHIP</b></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft" id="demand">
+      <div class="shell">
+        <div class="section-heading centered reveal">
+          <span class="kicker">WHY THIS BUSINESS</span>
+          <h2>You're selling something employers have to buy.</h2>
+          <p>Employers screen new hires because of compliance, insurance, and liability rules. That's why background checks are a B2B business with repeat orders.</p>
+        </div>
+        <div class="demand-grid">
+          <article class="demand-card reveal"><h3>Demand is built in.</h3><p>Your clients screen because they have to, not because you talked them into it.</p></article>
+          <article class="demand-card reveal"><h3>Low overhead.</h3><p>No storefront, no inventory, no support desk. Brango runs the back office.</p></article>
+          <article class="demand-card reveal"><h3>Repeat revenue.</h3><p>Clients order every time they hire.</p></article>
+          <article class="demand-card reveal"><h3>An asset you own.</h3><p>You build a company with your name on it and your own client relationships.</p></article>
         </div>
       </div>
     </section>
@@ -327,6 +375,65 @@
       </div>
     </section>
 
+    <section class="section section-soft" id="clients">
+      <div class="shell">
+        <div class="section-heading centered reveal">
+          <span class="kicker">WHO YOUR CLIENTS WILL BE</span>
+          <h2>Who your clients will be.</h2>
+          <p>These employers already screen people they hire. Pick a starting niche, then talk to the owners who place the orders.</p>
+        </div>
+        <div class="client-tabs reveal" data-client-tabs>
+          <div class="client-tablist" role="tablist" aria-label="Industries that screen" aria-orientation="horizontal">
+            <button type="button" role="tab" id="tab-staffing" aria-controls="panel-staffing" aria-selected="true" tabindex="0">Staffing &amp; Recruiting</button>
+            <button type="button" role="tab" id="tab-healthcare" aria-controls="panel-healthcare" aria-selected="false" tabindex="-1">Healthcare &amp; Care</button>
+            <button type="button" role="tab" id="tab-facility" aria-controls="panel-facility" aria-selected="false" tabindex="-1">Facility Services</button>
+            <button type="button" role="tab" id="tab-technology" aria-controls="panel-technology" aria-selected="false" tabindex="-1">Technology</button>
+          </div>
+          <div class="client-panel" role="tabpanel" tabindex="0" id="panel-staffing" aria-labelledby="tab-staffing">
+            <h3>Staffing &amp; Recruiting</h3>
+            <p>One staffing client can mean thousands of screens a year.</p>
+            <p>Staffing firms screen candidates before each placement, then order again when the next assignment starts.</p>
+          </div>
+          <div class="client-panel" role="tabpanel" tabindex="0" id="panel-healthcare" aria-labelledby="tab-healthcare" hidden>
+            <h3>Healthcare &amp; Care</h3>
+            <p>Hospitals, clinics, home care, and senior care screen nurses, aides, and office staff before they work with patients.</p>
+            <p>Licensing rules and patient safety make the check part of bringing someone on.</p>
+          </div>
+          <div class="client-panel" role="tabpanel" tabindex="0" id="panel-facility" aria-labelledby="tab-facility" hidden>
+            <h3>Facility Services</h3>
+            <p>Janitorial, security, and maintenance companies send people into someone else's building.</p>
+            <p>Those clients expect a screen before a worker gets a key or a badge.</p>
+          </div>
+          <div class="client-panel" role="tabpanel" tabindex="0" id="panel-technology" aria-labelledby="tab-technology" hidden>
+            <h3>Technology</h3>
+            <p>Software and IT companies screen employees and contractors who will see customer systems and internal data.</p>
+            <p>A new hire or a new contractor engagement is another order.</p>
+          </div>
+        </div>
+        <div class="everyone-block reveal">
+          <h3>Everyone hires. Everyone screens.</h3>
+          <ul class="industry-cloud" aria-label="More industries that screen">
+            <li>Retail</li>
+            <li>Construction</li>
+            <li>Logistics &amp; Trucking</li>
+            <li>Finance &amp; Insurance</li>
+            <li>Hospitality</li>
+            <li>Gig Platforms</li>
+            <li>Property Management</li>
+            <li>Nonprofits</li>
+            <li>Schools &amp; Childcare</li>
+            <li>Auto Dealerships</li>
+            <li>Manufacturing</li>
+            <li>Cannabis</li>
+            <li>Gyms &amp; Fitness</li>
+            <li>Home Services</li>
+            <li>Churches</li>
+            <li>Government Contractors</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
     <section class="section" id="software">
       <div class="shell">
         <div class="section-heading centered reveal">
@@ -414,21 +521,70 @@
             <summary>Is Brango reselling another company's platform?<span>+</span></summary>
             <p>No. Brango built and owns its screening software, and our own developers customize it for affiliates and their clients.<a class="faq-cta button button-primary button-small" href="/pricing.html#software" data-analytics="faq-software">See the platform →</a></p>
           </details>
+          <details>
+            <summary>How fast can I really launch?<span>+</span></summary>
+            <p>Your branded portal and vendors are set up in weeks 1–2. From weeks 3–12 you run demos with Brango's help.<a class="faq-cta button button-primary button-small" href="#launch" data-analytics="faq-launch">See the launch path →</a></p>
+          </details>
+          <details>
+            <summary>Will my market actually work?<span>+</span></summary>
+            <p>There are no territories, so you can sell anywhere in the U.S. On the first call we help you pick a starting niche, such as staffing, healthcare, or facility services.<a class="faq-cta button button-primary button-small" href="#clients" data-analytics="faq-market">See who your clients will be →</a></p>
+          </details>
+          <details>
+            <summary>Is this a fit, both ways?<span>+</span></summary>
+            <p>Every application is read by a person. We walk through the numbers and the fit on a call. If it's not a fit, we'll tell you. No payment is taken when you apply.<a class="faq-cta button button-primary button-small" href="#contact" data-analytics="faq-fit">Apply to Become an Affiliate →</a></p>
+          </details>
         </div>
       </div>
     </section>
 
     <section class="section contact-section" id="contact">
       <div id="model"></div>
-      <div class="shell contact-layout">
+      <div class="shell">
+        <div class="qualifier reveal" id="fit-quiz" data-fit-quiz>
+          <span class="kicker">BEFORE YOU APPLY</span>
+          <h2>Three questions before you apply.</h2>
+          <p id="fit-quiz-note">Your answers stay in the browser. Nothing is saved or sent.</p>
+          <div class="quiz-questions">
+            <fieldset class="quiz-q">
+              <legend>Where are you starting from?</legend>
+              <div class="quiz-options">
+                <label><input type="radio" name="fit_start" value="yes"> <span>Ready to invest in a real business</span></label>
+                <label><input type="radio" name="fit_start" value="no"> <span>Just exploring for now</span></label>
+              </div>
+            </fieldset>
+            <fieldset class="quiz-q">
+              <legend>How soon do you want your first clients?</legend>
+              <div class="quiz-options">
+                <label><input type="radio" name="fit_timing" value="yes"> <span>Inside 90 days</span></label>
+                <label><input type="radio" name="fit_timing" value="no"> <span>No rush, someday</span></label>
+              </div>
+            </fieldset>
+            <fieldset class="quiz-q">
+              <legend>Will you get on calls with business owners?</legend>
+              <div class="quiz-options">
+                <label><input type="radio" name="fit_calls" value="yes"> <span>That's the part I'd enjoy</span></label>
+                <label><input type="radio" name="fit_calls" value="no"> <span>Only if I have to</span></label>
+              </div>
+            </fieldset>
+          </div>
+          <div class="quiz-result" data-quiz-result>
+            <p data-quiz-text role="status" aria-live="polite"></p>
+            <div class="quiz-actions" data-quiz-actions hidden>
+              <a class="button button-primary" href="#apply-form" data-analytics="quiz-apply">Apply to Become an Affiliate</a>
+              <a class="button button-secondary" href="https://calendar.app.google/HRjFjbsaZtN8QM1H8" target="_blank" rel="noopener" data-analytics="quiz-book">Book a call</a>
+            </div>
+          </div>
+        </div>
+        <div class="contact-layout">
         <div class="contact-copy reveal">
           <span class="kicker">APPLY</span>
           <h2>Tell us where to reply.</h2>
-          <p>Send your name and email. Phone and a note are optional. Brango replies by email to set up a call, and the next page has the 1-page guide.</p>
+          <p>Send your name and email. Phone, the best time to reach you, and a note are optional. Brango replies by email to set up a call, and the next page has the 1-page guide.</p>
+          <p class="apply-note">Every application is read by a person. We walk through the numbers and the fit on a call. If it's not a fit, we'll tell you. No payment is taken when you apply.</p>
           <p class="contact-direct">Prefer email? <a href="mailto:info@brangoconnect.com">info@brangoconnect.com</a></p>
           <p class="book-line">Prefer to talk first? <a href="https://calendar.app.google/HRjFjbsaZtN8QM1H8" target="_blank" rel="noopener" data-analytics="contact-book">Book a call</a></p>
         </div>
-        <div class="contact-form-card reveal">
+        <div class="contact-form-card reveal" id="apply-form">
           <form class="js-lead-form" action="https://formspree.io/f/xgawroga" method="POST">
             <input type="hidden" name="_subject" value="New Brango Connect affiliate application">
             <input type="hidden" name="_next" value="https://brangoconnect.com/thank-you.html">
@@ -439,6 +595,8 @@
               <label class="form-wide"><span>Name *</span><input type="text" name="name" autocomplete="name" required></label>
               <label><span>Email *</span><input type="email" name="email" autocomplete="email" required></label>
               <label><span>Phone <em class="optional-mark">optional</em></span><input type="tel" name="phone" autocomplete="tel" inputmode="tel"></label>
+              <label><span>Best time to reach you <em class="optional-mark">optional</em></span><input type="text" name="best_time" autocomplete="off"></label>
+              <label><span>How do you plan to fund it? <em class="optional-mark">optional</em></span><select name="funding"><option value="">Select (optional)</option><option>Cash</option><option>SBA financing</option><option>Still deciding</option></select></label>
               <label class="form-wide"><span>Message <em class="optional-mark">optional</em></span><textarea name="message" rows="3" placeholder="Optional. A few sentences about your background is enough."></textarea></label>
             </div>
             <button class="button button-primary button-large form-submit" type="submit">Apply to Become an Affiliate <b>→</b></button>
@@ -446,6 +604,7 @@
             <p class="form-privacy">Please don't include Social Security numbers or other sensitive candidate data.</p>
             <div class="form-status" role="status" aria-live="polite"></div>
           </form>
+        </div>
         </div>
       </div>
     </section>
