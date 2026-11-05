@@ -93,3 +93,9 @@ blockquote.quote-line{margin:26px 0 0}
 .tier-row strong{display:block;font-size:48px;letter-spacing:-.045em;color:#147ff2;line-height:1}
 .tier-row span{display:block;margin-top:8px;color:#657388;font-size:14px;line-height:1.45}
 @media(max-width:850px){.compare-grid{grid-template-columns:1fr}.model-tier{align-items:flex-start;flex-direction:column;gap:6px}.model-tier span{text-align:left}.tier-row{grid-template-columns:1fr}}
+
+/* Animated header logo (assets/brango-logo-animated.js swaps the header lockup for the vector logo). */
+.brand-lockup--animated{gap:0}
+.brand-lockup--animated .bcl-svg{display:block;height:70px;width:auto;aspect-ratio:880/360;overflow:visible;transform-origin:22% 50%}
+@media(max-width:900px){.brand-lockup--animated .bcl-svg{height:58px}}
+@media(max-width:560px){.brand-lockup--animated .bcl-svg{height:50px}}
