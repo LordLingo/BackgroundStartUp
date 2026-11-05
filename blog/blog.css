@@ -14,8 +14,8 @@
   box-shadow:0 12px 34px rgba(30,55,80,.05);
 }
 .blog-card-sample{
-  border-color:#ffd7b8;
-  box-shadow:0 12px 34px rgba(255,101,0,.08);
+  border-color:#BBDEFB;
+  box-shadow:0 12px 34px rgba(21,101,192,.10);
 }
 .blog-flag{
   display:inline-flex;
@@ -23,8 +23,8 @@
   margin:0 0 10px;
   padding:5px 10px;
   border-radius:99px;
-  background:#fff3e8;
-  color:#ff6500;
+  background:#E3F4FC;
+  color:#0D47A1;
   font-size:11px;
   font-weight:800;
   letter-spacing:.08em;
@@ -84,9 +84,9 @@
   margin:18px 0 0;
   padding:12px 14px;
   border-radius:12px;
-  background:#fff7ef;
-  border:1px solid #ffd7b8;
-  color:#6a3b12;
+  background:#F4F9FD;
+  border:1px solid #BBDEFB;
+  color:#0D47A1;
   font-size:14px;
   font-weight:650;
   line-height:1.5;
